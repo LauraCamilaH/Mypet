@@ -1,0 +1,15 @@
+{
+    "prod": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-mypet-react-prod-122027-authRole",
+            "UnauthRoleArn": "arn:aws:iam::058846700678:role/amplify-mypet-react-prod-122027-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::058846700678:role/amplify-mypet-react-prod-122027-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-mypet-react-prod-122027-deployment",
+            "UnauthRoleName": "amplify-mypet-react-prod-122027-unauthRole",
+            "StackName": "amplify-mypet-react-prod-122027",
+            "StackId": "arn:aws:cloudformation:us-east-2:058846700678:stack/amplify-mypet-react-prod-122027/e6f37b30-8198-11ea-b8e2-065ddb117676",
+            "AmplifyAppId": "d1ne9x5ystgmns"
+        }
+    }
+}
