@@ -24,6 +24,5 @@
     "tests",
     "build"
   ],
-  "allow_root": true,
   "private": true
 }
