@@ -43,13 +43,13 @@ export default function Footer(props) {
           <span>
             &copy; {1900 + new Date().getYear()}{" "}
             <a
-              href="https://www.creative-tim.com?ref=mdr-footer"
+              href="https://cun.edu.co/"
               target="_blank"
               className={classes.a}
             >
-              Creative Tim
+              Desarrollo web__
             </a>
-            , made with love for a
+            Corporación Unificada de Educación Superior "CUN"
           </span>
         </p>
       </div>
