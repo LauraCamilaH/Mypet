@@ -36,7 +36,7 @@ const styles = {
 
 const useStyles = makeStyles(styles);
 
-export default function UserProfile() {
+export default function RegistrarMascota() {
   const classes = useStyles();
   return (
     <div>

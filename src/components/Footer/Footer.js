@@ -49,7 +49,7 @@ export default function Footer(props) {
             >
               Creative Tim
             </a>
-            , made with love for a better web
+            , made with love for a
           </span>
         </p>
       </div>
