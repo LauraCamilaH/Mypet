@@ -7,14 +7,14 @@ import Person from "@material-ui/icons/Person";
 // core components/views for Admin layout
 import DashboardPage from "views/Inicio/Dashboard.js";
 
-import RegistrarMascota from "views/Icons/RegistrarMascota.js";
-import TableList from "views/TableList/TableList.js";
+import RegistrarMascota from "views/RegistroMascotas/RegistrarMascota.js";
+import TableList from "views/MisMascotas/TableList.js";
 
 import UserProfile from "views/UserProfile/UserProfile.js";
 import HMnuevoEventoVacuna from "views/Historial/HMnuevoEventoVacuna";
 
 const dashboardRoutes = [
-  {
+  { 
     path: "/Inicio",
     name: "My Pet inicio",
     icon: Dashboard,
@@ -29,7 +29,7 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/misMascotas",
+    path: "/MisMascotas",
     name: "Mis mascotas",
     icon: "favorite",
     component: TableList,
@@ -43,7 +43,7 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/registro mascotas",
+    path: "/RegistroMascotas",
     name: "Registrar mascotas",
     icon: 'library_books',
     component: RegistrarMascota,
