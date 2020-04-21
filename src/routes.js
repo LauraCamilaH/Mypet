@@ -5,7 +5,7 @@
 import Dashboard from "@material-ui/icons/Dashboard";
 import Person from "@material-ui/icons/Person";
 // core components/views for Admin layout
-import DashboardPage from "views/Dashboard/Dashboard.js";
+import DashboardPage from "views/Inicio/Dashboard.js";
 
 import RegistrarMascota from "views/Icons/RegistrarMascota.js";
 import TableList from "views/TableList/TableList.js";
