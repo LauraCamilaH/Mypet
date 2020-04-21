@@ -8,7 +8,7 @@ import Person from "@material-ui/icons/Person";
 import DashboardPage from "views/Inicio/Dashboard.js";
 
 import RegistrarMascota from "views/RegistroMascotas/RegistrarMascota.js";
-import TableList from "views/MisMascotas/TableList.js";
+import TableList from "views/Mascotas/TableList.js";
 
 import UserProfile from "views/UserProfile/UserProfile.js";
 import HMnuevoEventoVacuna from "views/Historial/HMnuevoEventoVacuna";
@@ -29,7 +29,7 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/MisMascotas",
+    path: "/mascotas",
     name: "Mis mascotas",
     icon: "favorite",
     component: TableList,
