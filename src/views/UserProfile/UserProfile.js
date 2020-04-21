@@ -40,6 +40,7 @@ export default function UserProfile() {
   const classes = useStyles();
   return (
     <div>
+    
       <GridContainer>
         <GridItem xs={12} sm={12} md={8}>
           <Card>
@@ -48,6 +49,7 @@ export default function UserProfile() {
               <p className={classes.cardCategoryWhite}>Ingresa tu datos</p>
             </CardHeader>
             <CardBody>
+
               <GridContainer>
                 <GridItem xs={12} sm={12} md={12}>
                   <CustomInput
@@ -69,6 +71,7 @@ export default function UserProfile() {
                       fullWidth: true
                     }}
                   />
+
                 </GridItem>
                 <GridItem xs={12} sm={12} md={12}>
                   <CustomInput
@@ -92,6 +95,7 @@ export default function UserProfile() {
                     }}
                   />
                 </GridItem>
+
                 <GridItem xs={12} sm={12} md={12}>
                   <CustomInput
                     labelText="Confirmar Contraseña"
@@ -101,6 +105,7 @@ export default function UserProfile() {
                     }}
                   />
                 </GridItem>
+
               </GridContainer>
               <CardFooter>
               <Button color="primary">Guardar </Button>

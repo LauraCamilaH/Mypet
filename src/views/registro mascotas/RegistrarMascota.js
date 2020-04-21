@@ -13,7 +13,7 @@ import CardAvatar from "components/Card/CardAvatar.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
 
-import avatar from "assets/img/faces/avatar2.jpg";
+import avatar from "assets/img/faces/avatar.jpg";
 
 const styles = {
   cardCategoryWhite: {
@@ -47,7 +47,7 @@ export default function RegistrarMascota() {
           <Card>
             <CardHeader color="primary">
               <h4 className={classes.cardTitleWhite}>Registra a tu mascota </h4>
-              <p className={classes.cardCategoryWhite}>Ingresa los datos de tu mascota a My Pet</p>
+              <p className={classes.cardCategoryWhite}>Ingresa los datos de tu mascota a My Pet, para que puedes llevar el historial medico veterinario</p>
             </CardHeader>
             <CardBody>
                 <br></br>

@@ -3,19 +3,19 @@
 */
 // @material-ui/icons
 import Dashboard from "@material-ui/icons/Dashboard";
-import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import Person from "@material-ui/icons/Person";
 // core components/views for Admin layout
 import DashboardPage from "views/Dashboard/Dashboard.js";
-import Icons from "views/Icons/Icons.js";
+
 import RegistrarMascota from "views/Icons/RegistrarMascota.js";
 import TableList from "views/TableList/TableList.js";
-import Typography from "views/Typography/Typography.js";
+
 import UserProfile from "views/UserProfile/UserProfile.js";
+import HMnuevoEventoVacuna from "views/Historial/HMnuevoEventoVacuna";
 
 const dashboardRoutes = [
   {
-    path: "/dashboard",
+    path: "/Inicio",
     name: "My Pet inicio",
     icon: Dashboard,
     component: DashboardPage,
@@ -23,29 +23,29 @@ const dashboardRoutes = [
   },
   {
     path: "/user",
-    name: "User Profile",
+    name: "Usuario",
     icon: Person,
     component: UserProfile,
     layout: "/admin"
   },
   {
-    path: "/table",
+    path: "/misMascotas",
     name: "Mis mascotas",
     icon: "favorite",
     component: TableList,
     layout: "/admin"
   },
   {
-    path: "/typography",
-    name: "Historia Clinica",
-    icon: LibraryBooks,
-    component: Typography,
+    path: "/historial",
+    name: "Historia Clinica de mis mascotas",
+    icon: 'local_hospital',
+    component: HMnuevoEventoVacuna,
     layout: "/admin"
   },
   {
-    path: "/icons",
+    path: "/registro mascotas",
     name: "Registrar mascotas",
-    icon: "library_books",
+    icon: 'library_books',
     component: RegistrarMascota,
     layout: "/admin"
   },

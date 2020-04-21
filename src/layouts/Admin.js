@@ -16,7 +16,7 @@ import routes from "routes.js";
 import styles from "assets/jss/material-dashboard-react/layouts/adminStyle.js";
 
 import bgImage from "assets/img/sidebar-1.jpg";
-import logo from "assets/img/logo.jpg";
+import logo from "assets/img/logo.png";
 
 let ps;
 
