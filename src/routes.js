@@ -6,6 +6,7 @@ import Dashboard from "@material-ui/icons/Dashboard";
 import Person from "@material-ui/icons/Person";
 // core components/views for Admin layout
 import DashboardPage from "views/Inicio/Dashboard.js";
+import SingIn from "views/SignIn/SignIn.js";
 
 import RegistrarMascota from "views/RegistroMascotas/RegistrarMascota.js";
 import TableList from "views/Mascotas/TableList.js";
@@ -49,13 +50,13 @@ const dashboardRoutes = [
     component: RegistrarMascota,
     layout: "/admin"
   },
-  // {
-  //   path: "/icons2",
-  //   name: "Registrar 2 mascotas",
-  //   icon: "library_books",
-  //   component: Icons,
-  //   layout: "/admin"
-  // },
+  {
+    path: "/SignIn",
+    name: "SignIn",
+    icon: "favorite",
+    component: SingIn,
+    layout: "/admin"
+  },
 ];
 
 export default dashboardRoutes;

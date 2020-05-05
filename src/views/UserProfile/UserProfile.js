@@ -14,6 +14,7 @@ import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
 
 import avatar from "assets/img/faces/marc.jpg";
+import cardBodyStyle from "assets/jss/material-dashboard-react/components/cardBodyStyle";
 
 const styles = {
   cardCategoryWhite: {
@@ -40,9 +41,8 @@ export default function UserProfile() {
   const classes = useStyles();
   return (
     <div>
-    
       <GridContainer>
-        <GridItem xs={12} sm={12} md={8}>
+        <GridItem xs={12} sm={12} md={12}>
           <Card>
             <CardHeader color="primary">
               <h4 className={classes.cardTitleWhite}>Registrate</h4>
@@ -50,7 +50,7 @@ export default function UserProfile() {
             </CardHeader>
             <CardBody>
 
-              <GridContainer>
+              
                 <GridItem xs={12} sm={12} md={12}>
                   <CustomInput
                     labelText="Nombre"
@@ -71,8 +71,8 @@ export default function UserProfile() {
                       fullWidth: true
                     }}
                   />
-
                 </GridItem>
+
                 <GridItem xs={12} sm={12} md={12}>
                   <CustomInput
                     labelText="Email"
@@ -82,8 +82,6 @@ export default function UserProfile() {
                     }}
                   />
                 </GridItem>
-              </GridContainer>
-              <GridContainer>
 
                 <GridItem xs={12} sm={12} md={12}>
                   <CustomInput
@@ -106,15 +104,25 @@ export default function UserProfile() {
                   />
                 </GridItem>
 
-              </GridContainer>
               <CardFooter>
               <Button color="primary">Guardar </Button>
             </CardFooter>
+            </CardBody>
+          </Card>
+        </GridItem>
 
-            <GridContainer>
+        <GridItem xs={12} sm={12} md={12}>
+            <Card>
+
                 <GridItem xs={12} sm={12} md={12}>
-                  <InputLabel style={{ color: "#AAAAAA" }}>Continua  con el registro si perteneces a una veterinaria</InputLabel>
-                  <CustomInput
+                    <CardHeader color="primary">
+                      <h4 className={classes.cardTitleWhite}>Veterinarias</h4>
+                      <p className={classes.cardCategoryWhite}>Continua con el proceso si eres una veterinaria</p>
+                      </CardHeader>
+                      <cardBody>
+
+                  <GridItem xs= {12} sm= {12} md={12}>
+                    <CustomInput
                      labelText="Nombre Veterinaria"
                      id="nombre_veeterinaria"
                      formControlProps={{
@@ -122,9 +130,8 @@ export default function UserProfile() {
                      }}
                   />
                 </GridItem>
-              </GridContainer>
+    
               
-              <GridContainer>
                 <GridItem xs={12} sm={12} md={12}>
                   <CustomInput
                     labelText="Nit"
@@ -160,35 +167,14 @@ export default function UserProfile() {
                       fullWidth: true
                     }}
                   />
+                  <CardFooter>
+                   <Button color="primary">Guardar</Button>
+                 </CardFooter>
+    
                 </GridItem>
-              </GridContainer>
-  
-            </CardBody>
-            <CardFooter>
-              <Button color="primary">Guardar</Button>
-            </CardFooter>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={12} md={4}>
-          <Card profile>
-            <CardAvatar profile>
-              <a href="#pablo" onClick={e => e.preventDefault()}>
-                <img src={avatar} alt="..." />
-              </a>
-            </CardAvatar>
-            <CardBody profile>
-              <h6 className={classes.cardCategory}>CEO / CO-FOUNDER</h6>
-              <h4 className={classes.cardTitle}>Alec Thompson</h4>
-              <p className={classes.description}>
-                Don{"'"}t be scared of the truth because we need to restart the
-                human foundation in truth And I love you like Kanye loves Kanye
-                I love Rick Owens’ bed design but the back is...
-              </p>
-              <Button color="primary" round>
-                Follow
-              </Button>
-            </CardBody>
-          </Card>
+                </cardBody>
+                </GridItem>
+             </Card>
         </GridItem>
       </GridContainer>
     </div>
