@@ -48,7 +48,7 @@ export default function Dashboard() {
             </CardAvatar>
             <CardBody>
               <h4 className={classes.cardTitle}>Descuento</h4>
-              <p className={classes.cardCategory}> 55% descuento en peluqueria 
+              <p className={classes.cardCategory}> prueba para git55% descuento en peluqueria 
               </p>
             </CardBody>
             <CardFooter chart>
