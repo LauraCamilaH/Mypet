@@ -1,6 +1,6 @@
 
 
-import { Link, TextField, Typography } from '@material-ui/core';
+import { Link, TextField, Typography, Avatar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
@@ -8,11 +8,16 @@ import CardHeader from "components/Card/CardHeader.js";
 import Button from "components/CustomButtons/Button.js";
 // core components
 import GridItem from "components/Grid/GridItem.js";
+import GridContainer from "components/Grid/GridContainer";
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { Link as RouterLink, withRouter } from 'react-router-dom';
 import validate from 'validate.js';
+import Narvar from 'components/Navbars/Navbar';
+import bgImage from "assets/img/fondoinicio.jpg";
 
+import "Styles/Home.css";
+// import { Link } from 'react-router-dom';
 
 
 //ok
@@ -33,10 +38,10 @@ const schema = {
 };
 
 const useStyles = makeStyles(theme => ({
-  // root: {
-  //   backgroundColor: 'primary',
-  //   height: '100%'
-  // },
+  imagen: {
+    backgroundColor: 'primary',
+    height: '100%'
+  },
   // grid: {
   //   height: '100%'
   // },
@@ -61,29 +66,31 @@ const useStyles = makeStyles(theme => ({
   // bio: {
   //   color: 'blue'
   // },
-  // contentContainer: {},
-  // content: {
-  //   height: '100%',
-  //   display: 'flex',
-  //   flexDirection: 'column'
-  // },
-  // contentHeader: {
-  //   display: 'flex',
-  //   alignItems: 'center',
-  //   paddingTop: theme.spacing(5),
-  //   paddingBototm: theme.spacing(2),
-  //   paddingLeft: theme.spacing(2),
-  //   paddingRight: theme.spacing(2)
-  // },
-  
-  // contentBody: {
-  //   flexGrow: 1,
-  //   display: 'flex',
-  //   alignItems: 'center',
-  //   [theme.breakpoints.down('md')]: {
-  //     justifyContent: 'center'
-  //   }
-  // },
+  contentContainer: {},
+  content: {
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  contentHeader: {
+    display: 'flex',
+    alignItems: 'center',
+    paddingTop: theme.spacing(5),
+    paddingBototm: theme.spacing(2),
+    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(2)
+  },
+
+  contentBody: {
+    flexGrow: 1,
+    display: 'flex',
+    alignItems: 'center',
+    [theme.breakpoints.down('md')]: {
+      justifyContent: 'center'
+    }
+  },
+
+
   // form: {
   //   paddingLeft: 100,
   //   paddingRight: 100,
@@ -113,7 +120,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const SignIn = props => {
+const SignIn = (props, navigation) => {
   const { history } = props;
 
   const classes = useStyles();
@@ -124,9 +131,9 @@ const SignIn = props => {
     touched: {},
     errors: {}
   });
-//ok
+  //ok
   useEffect(() => {
-    const errors = validate(formState.values, schema); 
+    const errors = validate(formState.values, schema);
 
     setFormState(formState => ({
       ...formState,
@@ -163,83 +170,106 @@ const SignIn = props => {
   const hasError = field =>
     formState.touched[field] && formState.errors[field] ? true : false;
 
-   
   return (
-  
-      
+    <div >
       <GridItem xs={12} sm={12} md={12}>
         <Card>
-        <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}> Bienvenido a  My Pet</h4> 
-              {/* no tiene el estilo */}
-            </CardHeader>
-            
-              <CardBody
-                // className={classes.form}
-                onSubmit={handleSignIn}
-              >
-                <Typography
-                  className={classes.title}
-                  variant="h2"
-                >
-                  Iniciar sesion
-                </Typography>
-               
-                <TextField
-                  className={classes.textField}
-                  error={hasError('email')}
-                  fullWidth
-                  helperText={
-                    hasError('email') ? formState.errors.email[0] : null
-                  }
-                  label="Correo Electronico"
-                  name="email"
-                  onChange={handleChange}
-                  type="text"
-                  value={formState.values.email || ''}
-                  variant="outlined"
-                />
-                <TextField
-                  className={classes.textField}
-                  error={hasError('Contraseña')}
-                  fullWidth
-                  helperText={
-                    hasError('password') ? formState.errors.password[0] : null
-                  }
-                  label="Contraseña"
-                  name="password"
-                  onChange={handleChange}
-                  type="password"
-                  value={formState.values.password || ''}
-                  variant="outlined"
-                />
-                <Button
-                  className={classes.signInButton}
-                  color="primary"
-                  disabled={!formState.isValid}
-                  fullWidth
-                  size="large"
-                  type="submit"
-                  variant="contained"
-                >
-                  Ingresar
-                </Button>
-                <Typography
-                  color="textSecondary"
-                  variant="body1"
-                >
-                  ¿No tienes cuenta?{' '}
-                  <Link
-                    component={RouterLink}
-                    to="/sign-up"
-                    variant="h6"
-                  >
-                    Registrarte aqui
-                  </Link>
-                </Typography>
-              </CardBody>
+          <img className="imagen" src={bgImage}>
+          </img>
         </Card>
       </GridItem>
+
+      <GridContainer>
+        <GridItem xs={12} sm={12} md={12}>
+
+          <Card >
+            <CardHeader color="primary">
+
+              <h4 className={classes.cardTitleWhite}> Bienvenido a  My Pet</h4>
+              {/* no tiene el estilo */}
+            </CardHeader>
+
+            <CardBody
+              // className={classes.form}
+              onSubmit={handleSignIn}
+            >
+
+              <Typography
+                className={classes.title}
+                variant="h2"
+              >
+                Iniciar sesion
+                </Typography>
+
+              <TextField
+                className={classes.textField}
+                error={hasError('email')}
+                fullWidth
+                helperText={
+                  hasError('email') ? formState.errors.email[0] : null
+                }
+                label="Correo Electronico"
+                name="email"
+                onChange={handleChange}
+                type="text"
+                value={formState.values.email || ''}
+                variant="outlined"
+              />
+              <TextField
+                className={classes.textField}
+                error={hasError('Contraseña')}
+                fullWidth
+                helperText={
+                  hasError('password') ? formState.errors.password[0] : null
+                }
+                label="Contraseña"
+                name="password"
+                onChange={handleChange}
+                type="password"
+                value={formState.values.password || ''}
+                variant="outlined"
+              />
+
+              {/* <Link className="btn btn-primary" to="/admin">
+                Start
+              </Link> */}
+
+              <Button
+                className={classes.signInButton}
+                color="primary"
+                disabled={!formState.isValid}
+                fullWidth
+                size="lg"
+                type="submit"
+                variant="contained"
+                onClick={() => window.location.href= '/admin/inicio'}
+              >
+                Ingresar
+                </Button>
+              <Typography
+                color="textSecondary"
+                variant="body1"
+              >
+                ¿No tienes cuenta?{' '}
+                <Link
+                  component={RouterLink}
+                  to="/admin/inicio"
+                  variant="h6"
+                >
+
+                  Registrarte aqui
+                  </Link>
+
+                < Link to="/admin/inicio" className="btn btn-primary" >
+                  NNew Badge</Link>
+              </Typography>
+            </CardBody>
+          </Card>
+        </GridItem>
+      </GridContainer>
+
+    </div>
+
   );
 };
 

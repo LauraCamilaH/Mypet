@@ -14,7 +14,10 @@ import TableList from "views/Mascotas/TableList.js";
 import UserProfile from "views/UserProfile/UserProfile.js";
 import HMnuevoEventoVacuna from "views/Historial/HMnuevoEventoVacuna";
 
-const dashboardRoutes = [
+const dashboardRoutes = 
+
+[
+
   { 
     path: "/Inicio",
     name: "My Pet inicio",

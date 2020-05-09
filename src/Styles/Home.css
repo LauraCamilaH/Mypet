@@ -1,0 +1,40 @@
+.Home {
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  background-color: transparent;
+  background-image: url ("../../fondoinicio.jpg") ;
+  background-position: center center;
+  background-size: 100% 100%;
+
+  color: #0a507e;
+  display: flex;
+  align-items: center;
+}
+
+.Home__col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100 ;
+  margin: 1px 0 10px 200px;
+  padding-Left: 1000;
+  padding-right: 100;
+  padding-Bottom: 125;
+
+}
+
+.imagen {
+ max-width: 300px;
+ max-height: 300px;
+  overflow: hidden;
+  position:relative;
+  margin: 10px 0 10px 500px;
+  
+}
+
+@media screen and (min-width: 768px) {
+  .Home__col {
+    align-items: flex-start;
+  }
+}

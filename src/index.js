@@ -23,6 +23,8 @@ import theme from './theme';
 import { ThemeProvider } from '@material-ui/styles';
 // core components
 import Admin from "layouts/Admin.js";
+import Home from "./views/SignIn";
+
 
 
 import "assets/css/material-dashboard-react.css?v=1.8.0";
@@ -31,12 +33,13 @@ const hist = createBrowserHistory();
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
-  <Router history={hist}>
-    <Switch>
-      <Route path="/admin" component={Admin} />
-      <Redirect from="/" to="/admin/dashboard" />
-    </Switch>
-  </Router>
+    <Router history={hist}>
+      <Switch>
+        <Route path="/admin" component={Admin} />
+        {/* <Route path="/login" component={Home} /> */}
+        <Redirect from="/" to="/admin" />
+      </Switch>
+    </Router>
   </ThemeProvider>,
   document.getElementById("root")
 );
