@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
@@ -36,13 +36,27 @@ const styles = {
 
 const useStyles = makeStyles(styles);
 
+
+// handleSubmit = (e)=>{
+//         e.preventDefault()
+//         console.log(' from was submitted');
+//         console.log(this.state);
+//     }
+
+
+
 export default function RegistrarMascota() {
   const classes = useStyles();
+  const [nombre, setNombre] = React.useState();
+  const [color, setColor] = React.useState();
+  
+  function handleClick(){
+    console.log(nombre);
+  }
+
   return (
     <div>
-
       <GridContainer>
-        
         <GridItem xs={12} sm={12} md={12}>
           <Card>
             <CardHeader color="primary">
@@ -50,14 +64,14 @@ export default function RegistrarMascota() {
               <p className={classes.cardCategoryWhite}>Ingresa los datos de tu mascota a My Pet, para que puedes llevar el historial medico veterinario</p>
             </CardHeader>
             <CardBody>
-                <br></br>
-                <br></br>
-            <CardAvatar profile>
-              <a href="#" onClick={e => e.preventDefault()}>
-                <img src={avatar} />
-              </a>
-            </CardAvatar>
-              <GridContainer>
+              <br></br>
+              <br></br>
+              <CardAvatar profile>
+                <a href="#" onClick={e => e.preventDefault()}>
+                  <img src={avatar} />
+                </a>
+              </CardAvatar>
+              <GridContainer >
                 <GridItem xs={12} sm={12} md={6}>
                   <CustomInput
                     labelText="Nombre de tu mascota"
@@ -65,7 +79,10 @@ export default function RegistrarMascota() {
                     formControlProps={{
                       fullWidth: true
                     }}
-                    
+                    inputProps={{
+                      value: nombre,
+                      onChange: (e) => setNombre(e.target.value)
+                    }}
                   />
                 </GridItem>
                 <GridItem xs={12} sm={12} md={6}>
@@ -86,13 +103,16 @@ export default function RegistrarMascota() {
                     }}
                   />
                 </GridItem>
-
                 <GridItem xs={12} sm={12} md={6}>
                   <CustomInput
-                    labelText="Color de tu mascota" 
+                    labelText="Color de tu mascota"
                     id="color"
                     formControlProps={{
                       fullWidth: true,
+                    }}
+                    inputProps={{
+                      value: color,
+                      onChange: (e) => setColor(e.target.value)
                     }}
                   />
                 </GridItem>
@@ -133,13 +153,12 @@ export default function RegistrarMascota() {
                   />
                 </GridItem>
                 <GridItem xs={12} sm={12} md={6}>
-            
                   <CustomInput
-                     labelText="señas particulares"
-                     id="señales particulaes"
-                     formControlProps={{
-                       fullWidth: true
-                     }}
+                    labelText="señas particulares"
+                    id="señales particulaes"
+                    formControlProps={{
+                      fullWidth: true
+                    }}
                   />
                 </GridItem>
 
@@ -147,7 +166,7 @@ export default function RegistrarMascota() {
 
             </CardBody>
             <CardFooter>
-              <Button color="primary">Guardar</Button>
+              <Button color="primary" onClick={handleClick}>Guardar</Button>
             </CardFooter>
           </Card>
         </GridItem>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 // @material-ui/core components
@@ -38,6 +38,7 @@ export default function CustomInput(props) {
   const marginTop = classNames({
     [classes.marginTop]: labelText === undefined
   });
+
   return (
     <FormControl
       {...formControlProps}
