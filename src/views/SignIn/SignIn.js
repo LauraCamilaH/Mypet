@@ -167,9 +167,18 @@ const SignIn = (props, navigation) => {
     history.push('/');
   };
 
+  // const [email, setEmail] = React.useState();
+  // const [email, setEmail] = React.useState();
+
   const hasError = field =>
     formState.touched[field] && formState.errors[field] ? true : false;
 
+    // function handleClick (){
+    //   console.log (email);
+
+    // }
+
+    console.log (formState.values.password);
   return (
     <div >
       <GridItem xs={12} sm={12} md={12}>
@@ -214,6 +223,10 @@ const SignIn = (props, navigation) => {
                 type="text"
                 value={formState.values.email || ''}
                 variant="outlined"
+                // inputProps={{
+                // value: email,
+                // onChange: (e) => setEmail(e.target.value)}}
+
               />
               <TextField
                 className={classes.textField}
@@ -243,6 +256,7 @@ const SignIn = (props, navigation) => {
                 type="submit"
                 variant="contained"
                 onClick={() => window.location.href= '/admin/inicio'}
+                // onClick = {handleClick}
               >
                 Ingresar
                 </Button>
@@ -256,12 +270,8 @@ const SignIn = (props, navigation) => {
                   to="/admin/inicio"
                   variant="h6"
                 >
-
                   Registrarte aqui
                   </Link>
-
-                < Link to="/admin/inicio" className="btn btn-primary" >
-                  NNew Badge</Link>
               </Typography>
             </CardBody>
           </Card>

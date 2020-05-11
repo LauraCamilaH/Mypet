@@ -9,7 +9,7 @@ import DashboardPage from "views/Inicio/Dashboard.js";
 import SingIn from "views/SignIn/SignIn.js";
 
 import RegistrarMascota from "views/RegistroMascotas/RegistrarMascota.js";
-import TableList from "views/Mascotas/TableList.js";
+import TableList from "views/Mascotas/Mascotas.js";
 
 import UserProfile from "views/UserProfile/UserProfile.js";
 import HMnuevoEventoVacuna from "views/Historial/HMnuevoEventoVacuna";

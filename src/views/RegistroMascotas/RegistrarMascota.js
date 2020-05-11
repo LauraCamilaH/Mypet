@@ -46,12 +46,29 @@ const useStyles = makeStyles(styles);
 
 
 export default function RegistrarMascota() {
+
   const classes = useStyles();
+
+  const [tamano, setTamano] = React.useState();
   const [nombre, setNombre] = React.useState();
+  const [fechaNacimiento, setFechaNacimiento] = React.useState();
   const [color, setColor] = React.useState();
+  const [sexo, setSexo] = React.useState();
+  const [peso, setPeso] = React.useState();
+  const [especie, setEspecie] = React.useState();
+  const [raza, setRaza] = React.useState();
+  const [senasParticulares, setSenasParticulares] = React.useState();
   
   function handleClick(){
+
     console.log(nombre);
+    console.log(fechaNacimiento);
+    console.log(tamano);
+    console.log(color);
+    console.log(sexo);
+    console.log(especie);
+    console.log(raza);
+    console.log(senasParticulares);
   }
 
   return (
@@ -92,6 +109,10 @@ export default function RegistrarMascota() {
                     formControlProps={{
                       fullWidth: true
                     }}
+                    inputProps={{
+                      value: fechaNacimiento,
+                      onChange: (e) => setFechaNacimiento(e.target.value)
+                    }}
                   />
                 </GridItem>
                 <GridItem xs={12} sm={12} md={6}>
@@ -100,6 +121,10 @@ export default function RegistrarMascota() {
                     id="tamano"
                     formControlProps={{
                       fullWidth: true
+                    }}
+                    inputProps={{
+                      value: tamano,
+                      onChange: (e) => setTamano(e.target.value)
                     }}
                   />
                 </GridItem>
@@ -123,6 +148,10 @@ export default function RegistrarMascota() {
                     formControlProps={{
                       fullWidth: true
                     }}
+                    inputProps={{
+                      value: sexo,
+                      onChange: (e) => setSexo(e.target.value)
+                    }}
                   />
                 </GridItem>
                 <GridItem xs={12} sm={12} md={6}>
@@ -131,6 +160,10 @@ export default function RegistrarMascota() {
                     id="peso"
                     formControlProps={{
                       fullWidth: true
+                    }}
+                    inputProps={{
+                      value: peso,
+                      onChange: (e) => setPeso(e.target.value)
                     }}
                   />
                 </GridItem>
@@ -141,6 +174,10 @@ export default function RegistrarMascota() {
                     formControlProps={{
                       fullWidth: true
                     }}
+                    inputProps={{
+                      value: especie,
+                      onChange: (e) => setEspecie(e.target.value)
+                    }}
                   />
                 </GridItem>
                 <GridItem xs={12} sm={12} md={6}>
@@ -150,14 +187,22 @@ export default function RegistrarMascota() {
                     formControlProps={{
                       fullWidth: true
                     }}
+                    inputProps={{
+                      value: raza,
+                      onChange: (e) => setRaza(e.target.value)
+                    }}
                   />
                 </GridItem>
                 <GridItem xs={12} sm={12} md={6}>
                   <CustomInput
                     labelText="señas particulares"
-                    id="señales particulaes"
+                    id="señalesParticulares"
                     formControlProps={{
                       fullWidth: true
+                    }}
+                    inputProps={{
+                      value: senasParticulares,
+                      onChange: (e) => setSenasParticulares(e.target.value)
                     }}
                   />
                 </GridItem>
