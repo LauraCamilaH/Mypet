@@ -178,16 +178,14 @@ const SignIn = (props, navigation) => {
 
     // }
 
-    console.log (formState.values.password);
+    console.log (formState.values.password)
   return (
-    <div >
-      <GridItem xs={12} sm={12} md={12}>
-        <Card>
-          <img className="imagen" src={bgImage}>
-          </img>
-        </Card>
-      </GridItem>
-
+    <body className= "imagenfondo">
+  
+    
+    <div className="centrado">
+    
+ 
       <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
 
@@ -195,6 +193,7 @@ const SignIn = (props, navigation) => {
             <CardHeader color="primary">
 
               <h4 className={classes.cardTitleWhite}> Bienvenido a  My Pet</h4>
+              <p> Plataforma web</p>
               {/* no tiene el estilo */}
             </CardHeader>
 
@@ -277,8 +276,9 @@ const SignIn = (props, navigation) => {
           </Card>
         </GridItem>
       </GridContainer>
-
+      {/* </GridContainer> */}
     </div>
+    </body>
 
   );
 };

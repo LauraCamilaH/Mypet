@@ -24,14 +24,29 @@
 
 }
 
+.centrado {
+  display: flex;
+  justify-content: center;
+}
+
 .imagen {
- max-width: 300px;
- max-height: 300px;
+ max-width: 500px;
+ max-height: 500px;
   overflow: hidden;
   position:relative;
-  margin: 10px 0 10px 500px;
+  margin: 100px 100x 100px 100px;
   
 }
+
+.imagenfondo{
+  background-image: url("./fondoinicio.jpg");
+  background-size : cover;
+  background-position: 0% 90%;
+  background-repeat: no-repeat;
+  
+
+   
+ }
 
 @media screen and (min-width: 768px) {
   .Home__col {
