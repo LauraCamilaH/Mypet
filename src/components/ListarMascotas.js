@@ -11,7 +11,7 @@ class ListarMascotasItem extends React.Component {
       <div className = "BadgesListItem">
         <img
           className="BadgesListItem__avatar"
-          src={this.props.badge.avatarUrl}
+          src={this.props.badge.avatar}
           alt={`${this.props.badge.nombre} ${this.props.badge.especie}`}
         />
 
@@ -19,9 +19,11 @@ class ListarMascotasItem extends React.Component {
           <strong>
             {this.props.badge.nombre} {this.props.badge.especie}
           </strong>
-          <br />@{this.props.badge.tamano}
+          <br />tamano: {this.props.badge.tamano}
+        
+          <br />Raza: {this.props.badge.raza}
           <br />
-          {this.props.badge.color}
+          color: {this.props.badge.color}
         </div>
       </div>
     );
@@ -29,19 +31,20 @@ class ListarMascotasItem extends React.Component {
 }
 
 class ListarMascotas extends React.Component {
+  
   render() {
     return (
       <div className="BadgesList">
-        <ul className="list-unstyled">
+        <div className="list-unstyled">
           {this.props.mascotas.map(badge => {
             return (
               
-              <li key={badge.id}>
+              <div key={badge.id} >
                 <ListarMascotasItem badge={badge} />
-              </li>
+              </div>
             );
           })}
-        </ul>
+        </div>
       </div>
     );
   }

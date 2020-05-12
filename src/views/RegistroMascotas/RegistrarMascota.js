@@ -12,8 +12,14 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardAvatar from "components/Card/CardAvatar.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
-
 import avatar from "assets/img/faces/avatar.jpg";
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import MyPetAPI from 'MyPetAPI';
+
 
 const styles = {
   cardCategoryWhite: {
@@ -36,12 +42,22 @@ const styles = {
 
 const useStyles = makeStyles(styles);
 
+const state = {
+  loading: false,
+ // error: null,
+ form: {
+   nombre: '',
+   tamano: '',
+   fechaNacimiento: '',
+   color: '',
+   sexo: '',
+   peso: '',
+   especie: '',
+   raza: '',
+   senasParticulares: '',
+ },
+};
 
-// handleSubmit = (e)=>{
-//         e.preventDefault()
-//         console.log(' from was submitted');
-//         console.log(this.state);
-//     }
 
 
 
@@ -58,9 +74,12 @@ export default function RegistrarMascota() {
   const [especie, setEspecie] = React.useState();
   const [raza, setRaza] = React.useState();
   const [senasParticulares, setSenasParticulares] = React.useState();
-  
-  function handleClick(){
+  const [open, setOpen] = React.useState(false);
 
+
+/*   function handleClick () {
+
+    
     console.log(nombre);
     console.log(fechaNacimiento);
     console.log(tamano);
@@ -70,6 +89,35 @@ export default function RegistrarMascota() {
     console.log(raza);
     console.log(senasParticulares);
   }
+*/
+async function handleClick(e) {
+    e.preventDefault();
+    //this.setState({ loading: true, error: null });
+    try {
+      let mascota = {
+        "nombre": nombre,
+        "fechaNacimiento": fechaNacimiento,
+        "tamano": tamano,
+        "color": color,
+        "peso": peso,
+        "sexo": sexo,
+        "senasParticulares": senasParticulares,
+        "especie": especie,
+        "usuarioId": 1,
+        "razaId": 1
+      }
+      let resultado = await MyPetAPI.mascotas.create(mascota)
+      setOpen(true);
+      //this.setState({ loading: false });
+    } catch (error) {
+      console.log(error);
+      //this.setState({ loading: false, error: error });
+    }
+   };
+
+   const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <div>
@@ -201,21 +249,43 @@ export default function RegistrarMascota() {
                       fullWidth: true
                     }}
                     inputProps={{
-                      value: senasParticulares,
+                      value:senasParticulares,
                       onChange: (e) => setSenasParticulares(e.target.value)
                     }}
                   />
-                </GridItem>
+                  
+                </GridItem> 
 
               </GridContainer>
 
             </CardBody>
             <CardFooter>
-              <Button color="primary" onClick={handleClick}>Guardar</Button>
+              <Button color="primary" onClick={handleClick}
+              >Guardar
+              
+              </Button>
             </CardFooter>
           </Card>
         </GridItem>
       </GridContainer>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">{"Listo"}</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Se ha creado la mascota
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} color="primary" autoFocus>
+            Aceptar
+          </Button>
+        </DialogActions>
+      </Dialog>
     </div>
   );
 }
