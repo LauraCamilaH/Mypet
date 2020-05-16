@@ -180,23 +180,16 @@ const SignIn = (props, navigation) => {
 
     console.log (formState.values.password)
   return (
-    <body className= "imagenfondo">
-  
-    
+    <body className= "imagenfondo">  
     <div className="centrado">
-    
- 
       <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
-
           <Card >
             <CardHeader color="primary">
-
               <h4 className={classes.cardTitleWhite}> Bienvenido a  My Pet</h4>
-              <p> Plataforma web</p>
+              <p> Plataforma web y </p>
               {/* no tiene el estilo */}
             </CardHeader>
-
             <CardBody
               // className={classes.form}
               onSubmit={handleSignIn}
@@ -255,6 +248,7 @@ const SignIn = (props, navigation) => {
                 type="submit"
                 variant="contained"
                 onClick={() => window.location.href= '/admin/inicio'}
+                //onClick={handleClick}
                 // onClick = {handleClick}
               >
                 Ingresar
@@ -266,7 +260,7 @@ const SignIn = (props, navigation) => {
                 ¿No tienes cuenta?{' '}
                 <Link
                   component={RouterLink}
-                  to="/admin/inicio"
+                  to="/UserProfile"
                   variant="h6"
                 >
                   Registrarte aqui

@@ -1,8 +1,8 @@
 import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-
 import { Link as RouterLink, withRouter } from 'react-router-dom';
+
 
 import InputLabel from "@material-ui/core/InputLabel";
 // core components
@@ -16,17 +16,9 @@ import CardAvatar from "components/Card/CardAvatar.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
 import "Styles/Home.css";
-import MyPetAPI from 'MyPetAPI';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
 
 import avatar from "assets/img/faces/marc.jpg";
 import cardBodyStyle from "assets/jss/material-dashboard-react/components/cardBodyStyle";
-
-  
 
 const styles = {
   cardCategoryWhite: {
@@ -50,42 +42,10 @@ const styles = {
 const useStyles = makeStyles(styles);
 
 export default function UserProfile() {
-
-
-  const [apellido, setApellido] = React.useState();
-  const [nombre, setNombre] = React.useState();
-  const [email, setEmail] = React.useState();
-  const [contrasena, setContrasena] = React.useState();
-  const [open, setOpen] = React.useState(false);
-
   const classes = useStyles();
-
-  async function handleClick(e) {
-    e.preventDefault();
-    //this.setState({ loading: true, error: null });
-    try {
-      let usuario = {
-        "nombres": nombre,
-        "apellidos": apellido,
-        "email": email,
-        "contrasena": contrasena
-      }
-      let resultado = await MyPetAPI.usuarios.create(usuario)
-      setOpen(true);
-      //this.setState({ loading: false });
-    } catch (error) {
-      console.log(error);
-      //this.setState({ loading: false, error: error });
-    }
-   };
-
-   const handleClose = () => {
-    setOpen(false);
-  };
-
   return (
-    <body className = "imagenfondo">
-      <div className= "centrado">
+    <div className = "imagenfondo">
+      <div className="centrado">
        <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
           <Card>
@@ -94,6 +54,8 @@ export default function UserProfile() {
               <p className={classes.cardCategoryWhite}>Ingresa tu datos</p>
             </CardHeader>
             <CardBody>
+
+              
                 <GridItem xs={12} sm={12} md={12}>
                   <CustomInput
                     labelText="Nombre"
@@ -102,91 +64,126 @@ export default function UserProfile() {
                       fullWidth: true
                     }}
                     inputProps={{
-                      fullWidth: true,
-                       onChange: (e) => setNombre(e.target.value)
-                    
+                      fullWidth: true
                     }}
                   />
                 </GridItem>
-                {/* <GridItem xs={12} sm={12} md={12}> */}
+                <GridItem xs={12} sm={12} md={12}>
                   <CustomInput
                     labelText="Apellido"
                     id="apellido"
                     formControlProps={{
-                      fullWidth: true,
-                      onChange: (e) => setApellido(e.target.value)
+                      fullWidth: true
                     }}
                   />
-                {/* </GridItem> */}
+                </GridItem>
 
-                {/* <GridItem xs={12} sm={12} md={12}> */}
+                <GridItem xs={12} sm={12} md={12}>
                   <CustomInput
                     labelText="Email"
                     id="email"
                     formControlProps={{
-                      fullWidth: true,
-                      onChange: (e) => setEmail(e.target.value)
+                      fullWidth: true
                     }}
                   />
-                {/* </GridItem> */}
+                </GridItem>
 
-                {/* <GridItem xs={12} sm={12} md={12}> */}
+                <GridItem xs={12} sm={12} md={12}>
                   <CustomInput
                     labelText="Ingrese contraseña"
                     id="clave"
                     formControlProps={{
                       fullWidth: true,
-                      input: 'password',
-                      
+                      input: 'password'
                     }}
                   />
-                {/* </GridItem> */}
+                </GridItem>
 
-                {/* <GridItem xs={12} sm={12} md={12}> */}
+                <GridItem xs={12} sm={12} md={12}>
                   <CustomInput
                     labelText="Confirmar Contraseña"
                     id="clave"
                     formControlProps={{
-                      fullWidth: true,
-                      onChange: (e) => setContrasena(e.target.value)
+                      fullWidth: true
                     }}
                   />
-                {/* </GridItem> */}
+                </GridItem>
 
               <CardFooter>
-              <Button color="primary" onClick={handleClick}> Registrarse </Button>
+              <Button color="primary">Guardar </Button>
             </CardFooter>
             </CardBody>
           </Card>
         </GridItem>
+        
+        
+        <GridItem xs={12} sm={12} md={12}>
+            <Card>
+
+                <GridItem xs={12} sm={12} md={12}>
+                    <CardHeader color="primary">
+                      <h4 className={classes.cardTitleWhite}>Veterinarias</h4>
+                      <p className={classes.cardCategoryWhite}>Continua con el proceso si eres una veterinaria</p>
+                      </CardHeader>
+                      <cardBody>
+
+                  <GridItem xs= {12} sm= {12} md={12}>
+                    <CustomInput
+                     labelText="Nombre Veterinaria"
+                     id="nombre_veeterinaria"
+                     formControlProps={{
+                       fullWidth: true
+                     }}
+                  />
+                </GridItem>
+    
+              
+                <GridItem xs={12} sm={12} md={12}>
+                  <CustomInput
+                    labelText="Nit"
+                    id="nit"
+                    formControlProps={{
+                      fullWidth: true
+                    }}
+                  />
+                </GridItem>
+                <GridItem xs={12} sm={12} md={12}>
+                  <CustomInput
+                    labelText="Dirección"
+                    id="direccion"
+                    formControlProps={{
+                      fullWidth: true
+                    }}
+                  />
+                </GridItem>
+                <GridItem xs={12} sm={12} md={12}>
+                  <CustomInput
+                    labelText="Teléfono"
+                    id="telefono"
+                    formControlProps={{
+                      fullWidth: true
+                    }}
+                  />
+                </GridItem>
+                <GridItem xs={12} sm={12} md={12}>
+                  <CustomInput
+                    labelText="Nombre medico veterinario"
+                    id="nombreVeterinario"
+                    formControlProps={{
+                      fullWidth: true
+                    }}
+                  />
+                  <CardFooter>
+                   <Button color="primary">Guardar</Button>
+                 </CardFooter>
+    
+                </GridItem>
+                </cardBody>
+                </GridItem>
+             </Card>
+        </GridItem>
       </GridContainer>
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle id="alert-dialog-title">{"Listo"}</DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            Se ha creado un nuevo usuario
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary" autoFocus   
-          onClick={() => window.location.href= '/admin/inicio'}
->
-            Aceptar
-            {/* <Link
-                  component={RouterLink}
-                  to="/admin"
-                  variant="h6"
-                >
-                  </Link> */}
-          </Button>
-        </DialogActions>
-      </Dialog>
       </div>
-    </body>
+    </div>
   );
 }

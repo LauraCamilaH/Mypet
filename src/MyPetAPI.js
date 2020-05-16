@@ -37,7 +37,27 @@ const MyPetAPI = {
     },
 
 
+  },
+
+  usuarios: {
+    create: (usuario) => {
+      return callApi(`/usuarios`, {
+        method: 'POST',
+        body: JSON.stringify(usuario),
+        });
   }
-}
+},
+
+eventos: {
+  
+  porMascota: (idMascota) => {
+    return callApi(`/eventos?idMascota=${idMascota}`)
+  },
+    
+},
+
+};
+
+
 
 export default MyPetAPI;

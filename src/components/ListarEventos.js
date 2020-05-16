@@ -7,7 +7,7 @@ import Card from './Grid/GridContainer';
 import { Button } from '@material-ui/core';
 
 
-class ListarMascotasItem extends React.Component {
+class ListarEventosItem extends React.Component {
 
   verDetalle = () => {
     console.log(this.props.badge)
@@ -16,20 +16,24 @@ class ListarMascotasItem extends React.Component {
   render() {
     return (
       <div className="BadgesListItem">
-        <br />
-        <img
+        <strong>
+            Evento:  {this.props.badge.nombre}  </strong>
+          
+        {/* <img
           className="BadgesListItem__avatar"
           src={this.props.badge.avatar}
         // alt={`${this.props.badge.nombre} ${this.props.badge.especie}`}
-        />
+        /> */}
+
         <div onClick={this.verDetalle}>
-          <strong>
-            Nombre:  {this.props.badge.nombre} Especie:  {this.props.badge.especie}
-          </strong>
-          <br />tamano: {this.props.badge.tamano}
-          <br />Raza: {this.props.badge.raza}
-          <br />
-          color: {this.props.badge.color}
+          {/* <strong>
+            Evento:  {this.props.badge.nombre}  </strong> */}
+          <strong><br/> Fecha:</strong>  {this.props.badge.fecha}
+          <strong><br />Observaciones:</strong> {this.props.badge.observaciones}
+          <strong><br />Medico veterinario: </strong>{this.props.badge.nombreVeterinario}
+          <br /> Medicacion : {this.props.badge.medicacion}
+          <br /> Sintomas : {this.props.badge.sintomas}
+          <br /> Diagnostico : {this.props.badge.diagnostico}
         </div>
 
       </div>
@@ -38,18 +42,18 @@ class ListarMascotasItem extends React.Component {
   }
 }
 
-class ListarMascotas extends React.Component {
+class ListarEventos extends React.Component {
 
   render() {
     return (
       <div className="BadgesList">
         <div className="list-unstyled">
-          {this.props.mascotas.map(badge => {
+          {this.props.eventos.map(badge => {
             return (
 
               <div key={badge.id} >
                 <br />
-                <ListarMascotasItem badge={badge} />
+                <ListarEventosItem badge={badge} />
 
                 <br />
               </div>
@@ -61,4 +65,4 @@ class ListarMascotas extends React.Component {
   }
 }
 
-export default ListarMascotas;
+export default ListarEventos;

@@ -46,7 +46,8 @@ export default function AdminNavbarLinks() {
           onClick={handleClickProfile}
           className={classes.buttonLink}
         >
-          <Person className={classes.icons} />
+          <Person className={classes.icons} /> 
+          salir
           <Hidden mdUp implementation="css">
             <p className={classes.linkText}></p>
           </Hidden>
@@ -71,7 +72,7 @@ export default function AdminNavbarLinks() {
                 transformOrigin:
                   placement === "bottom" ? "center top" : "center bottom"
               }}
-            >
+            > 
 
 
               <Paper>
@@ -80,8 +81,10 @@ export default function AdminNavbarLinks() {
                     <MenuItem
                       onClick={handleCloseProfile}
                       className={classes.dropdownItem}
+                      onClick={() => window.location.href= '/SignIn'}
+
                     >
-                      Salir
+                     Cerrar aplicación
                     </MenuItem>
 
                     <Divider light />

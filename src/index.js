@@ -9,6 +9,7 @@ import { ThemeProvider } from '@material-ui/styles';
 // core components
 import Admin from "layouts/Admin.js";
 import Home from "./views/SignIn";
+import UserProfile from "./views/UserProfile/UserProfile";
 
 
 
@@ -20,9 +21,12 @@ ReactDOM.render(
   <ThemeProvider theme={theme}>
     <Router history={hist}>
       <Switch>
+        <Route path="/signIn" component={Home} />
         <Route path="/admin" component={Admin} />
-        <Route path="/signin" component={Home} />
-        <Redirect from="/" to="/signin" />
+        
+        <Redirect from="/" to="/admin/mascotas" />
+
+        <Route path="/UserProfile" component={UserProfile} />
       </Switch>
     </Router>
   </ThemeProvider>,
