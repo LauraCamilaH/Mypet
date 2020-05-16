@@ -187,7 +187,7 @@ const SignIn = (props, navigation) => {
           <Card >
             <CardHeader color="primary">
               <h4 className={classes.cardTitleWhite}> Bienvenido a  My Pet</h4>
-              <p> Plataforma web y </p>
+              <p> Plataforma web para llevar el control medico veterinario de tus mascotas </p>
               {/* no tiene el estilo */}
             </CardHeader>
             <CardBody

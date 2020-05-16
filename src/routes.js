@@ -26,13 +26,13 @@ const dashboardRoutes =
     component: DashboardPage,
     layout: "/admin"
   },
-  {
-    path: "/user",
-    name: "Usuario",
-    icon: Person,
-    component: UserProfile,
-    layout: "/admin"
-  },
+  // {
+  //   path: "/user",
+  //   name: "Usuario",
+  //   icon: Person,
+  //   component: UserProfile,
+  //   layout: "/admin"
+  // },
   {
     path: "/mascotas",
     name: "Mis mascotas",
@@ -40,13 +40,13 @@ const dashboardRoutes =
     component: TableList,
     layout: "/admin"
   },
-  {
-    path: "/historial",
-    name: "Historia Clinica de mis mascotas",
-    icon: 'local_hospital',
-    component: HMnuevoEventoVacuna,
-    layout: "/admin"
-  },
+  // {
+  //   path: "/historial",
+  //   name: "Historia Clinica de mis mascotas",
+  //   icon: 'local_hospital',
+  //   component: HMnuevoEventoVacuna,
+  //   layout: "/admin"
+  // },
   {
     path: "/RegistroMascotas",
     name: "Registrar mascotas",
@@ -54,16 +54,16 @@ const dashboardRoutes =
     component: RegistrarMascota,
     layout: "/admin"
   },
-  {
-    path: "/SignIn",
-    name: "SignIn",
-    icon: "favorite",
-    component: SingIn,
-    layout: "/admin"
-  },
+  // {
+  //   path: "/SignIn",
+  //   name: "SignIn",
+  //   icon: "favorite",
+  //   component: SingIn,
+  //   layout: "/admin"
+  // },
   {
     path: "/Eventos",
-    name: "Eventos",
+    name: "Historial",
     icon: "favorite",
     component: Eventos,
     layout: "/admin"

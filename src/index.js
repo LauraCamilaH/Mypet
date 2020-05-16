@@ -23,10 +23,9 @@ ReactDOM.render(
       <Switch>
         <Route path="/signIn" component={Home} />
         <Route path="/admin" component={Admin} />
-        
-        <Redirect from="/" to="/admin/mascotas" />
-
         <Route path="/UserProfile" component={UserProfile} />
+        <Redirect from="/" to="/signIn" />
+
       </Switch>
     </Router>
   </ThemeProvider>,
