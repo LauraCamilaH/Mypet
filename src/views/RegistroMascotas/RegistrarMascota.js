@@ -77,19 +77,7 @@ export default function RegistrarMascota() {
   const [open, setOpen] = React.useState(false);
 
 
-/*   function handleClick () {
 
-    
-    console.log(nombre);
-    console.log(fechaNacimiento);
-    console.log(tamano);
-    console.log(color);
-    console.log(sexo);
-    console.log(especie);
-    console.log(raza);
-    console.log(senasParticulares);
-  }
-*/
 async function handleClick(e) {
     e.preventDefault();
     //this.setState({ loading: true, error: null });
@@ -104,7 +92,7 @@ async function handleClick(e) {
         "senasParticulares": senasParticulares,
         "especie": especie,
         "usuarioId": 1,
-        "razaId": 1
+        "razaId": 1,
       }
       let resultado = await MyPetAPI.mascotas.create(mascota)
       setOpen(true);

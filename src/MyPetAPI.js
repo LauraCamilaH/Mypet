@@ -53,6 +53,14 @@ eventos: {
   porMascota: (idMascota) => {
     return callApi(`/eventos?idMascota=${idMascota}`)
   },
+  
+  create: (evento) => {
+    return callApi(`/eventos`, {
+      method: 'POST',
+      body: JSON.stringify(evento),
+    });
+  },
+
     
 },
 

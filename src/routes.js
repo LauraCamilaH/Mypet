@@ -13,7 +13,7 @@ import RegistrarMascota from "views/RegistroMascotas/RegistrarMascota.js";
 import TableList from "views/Mascotas/Mascotas.js";
 
 import UserProfile from "views/UserProfile/UserProfile.js";
-import HMnuevoEventoVacuna from "views/Historial/HMnuevoEventoVacuna";
+import RegistroEvento from "views/Historial/RegistroEvento";
 
 const dashboardRoutes = 
 
@@ -40,13 +40,7 @@ const dashboardRoutes =
     component: TableList,
     layout: "/admin"
   },
-  // {
-  //   path: "/historial",
-  //   name: "Historia Clinica de mis mascotas",
-  //   icon: 'local_hospital',
-  //   component: HMnuevoEventoVacuna,
-  //   layout: "/admin"
-  // },
+  
   {
     path: "/RegistroMascotas",
     name: "Registrar mascotas",
@@ -61,6 +55,14 @@ const dashboardRoutes =
   //   component: SingIn,
   //   layout: "/admin"
   // },
+
+  {
+    path: "/historial",
+    name: "Ingreso de historial",
+    icon: 'local_hospital',
+    component: RegistroEvento,
+    layout: "/admin"
+  },
   {
     path: "/Eventos",
     name: "Historial",
