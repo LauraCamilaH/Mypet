@@ -14,7 +14,7 @@ const dashboardRoutes =
 [
 
   { 
-    path: "/Inicio",
+    path: "/inicio",
     name: "My Pet inicio",
     icon: Dashboard,
     component: DashboardPage,
