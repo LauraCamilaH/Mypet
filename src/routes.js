@@ -3,17 +3,14 @@
 */
 // @material-ui/icons
 import Dashboard from "@material-ui/icons/Dashboard";
-import Person from "@material-ui/icons/Person";
+import Eventos from "views/Eventos/Eventos.js";
+import RegistroEvento from "views/Historial/RegistroEvento";
 // core components/views for Admin layout
 import DashboardPage from "views/Inicio/Dashboard.js";
-import SingIn from "views/SignIn/SignIn.js";
-import Eventos from "views/Eventos/Eventos.js";
-
-import RegistrarMascota from "views/RegistroMascotas/RegistrarMascota.js";
 import TableList from "views/Mascotas/Mascotas.js";
+import RegistrarMascota from "views/RegistroMascotas/RegistrarMascota.js";
 
-import UserProfile from "views/UserProfile/UserProfile.js";
-import RegistroEvento from "views/Historial/RegistroEvento";
+
 
 const dashboardRoutes = 
 

@@ -37,7 +37,7 @@ function Eventos(props) {
           <br/>
           <div >
             <Button color="primary" 
-            //   onClick={() => window.location.href = '/admin/RegistroMascotas'}
+            onClick={() => window.location.href = '/admin/historial'}
             >
              Ingresar nuevo evento
             </ Button>

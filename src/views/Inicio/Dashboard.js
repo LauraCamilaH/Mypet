@@ -1,36 +1,26 @@
-import React from "react";
-// react plugin for creating charts
-import ChartistGraph from "react-chartist";
 // @material-ui/core
 import { makeStyles } from "@material-ui/core/styles";
-// @material-ui/icons
-import ArrowUpward from "@material-ui/icons/ArrowUpward";
 import AccessTime from "@material-ui/icons/AccessTime";
-
-// core components
-import GridItem from "components/Grid/GridItem.js";
-import GridContainer from "components/Grid/GridContainer.js";
-import Card from "components/Card/Card.js";
-import CardHeader from "components/Card/CardHeader.js";
-import CardBody from "components/Card/CardBody.js";
-import CardFooter from "components/Card/CardFooter.js";
 import oferta1 from "assets/img/ofertas/1.png";
 import oferta2 from "assets/img/ofertas/2.png";
 import oferta3 from "assets/img/ofertas/3.jpg";
 import oferta4 from "assets/img/ofertas/4.png";
 import oferta5 from "assets/img/ofertas/5.jpg";
-
-
-
-
-import {
-  dailySalesChart,
-  emailsSubscriptionChart,
-  completedTasksChart
-} from "variables/charts.js";
-
 import styles from "assets/jss/material-dashboard-react/views/dashboardStyle.js";
+import Card from "components/Card/Card.js";
 import CardAvatar from "components/Card/CardAvatar";
+import CardBody from "components/Card/CardBody.js";
+import CardFooter from "components/Card/CardFooter.js";
+import GridContainer from "components/Grid/GridContainer.js";
+// core components
+import GridItem from "components/Grid/GridItem.js";
+import React from "react";
+
+
+
+
+
+
 
 const useStyles = makeStyles(styles);
 

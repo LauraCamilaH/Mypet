@@ -1,24 +1,23 @@
-import React, { useRef } from "react";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-import InputLabel from "@material-ui/core/InputLabel";
-// core components
-import GridItem from "components/Grid/GridItem.js";
-import GridContainer from "components/Grid/GridContainer.js";
-import CustomInput from "components/CustomInput/CustomInput.js";
-import Button from "components/CustomButtons/Button.js";
-import Card from "components/Card/Card.js";
-import CardHeader from "components/Card/CardHeader.js";
-import CardAvatar from "components/Card/CardAvatar.js";
-import CardBody from "components/Card/CardBody.js";
-import CardFooter from "components/Card/CardFooter.js";
-import avatar from "assets/img/faces/avatar.jpg";
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+// @material-ui/core components
+import { makeStyles } from "@material-ui/core/styles";
+import avatar from "assets/img/faces/avatar.jpg";
+import Card from "components/Card/Card.js";
+import CardAvatar from "components/Card/CardAvatar.js";
+import CardBody from "components/Card/CardBody.js";
+import CardFooter from "components/Card/CardFooter.js";
+import CardHeader from "components/Card/CardHeader.js";
+import Button from "components/CustomButtons/Button.js";
+import CustomInput from "components/CustomInput/CustomInput.js";
+import GridContainer from "components/Grid/GridContainer.js";
+// core components
+import GridItem from "components/Grid/GridItem.js";
 import MyPetAPI from 'MyPetAPI';
+import React from "react";
 
 
 const styles = {

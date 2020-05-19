@@ -1,10 +1,6 @@
 import React from 'react';
-
 import './styles/ListarMascotas.css';
-import { card } from 'assets/jss/material-dashboard-react';
-import GridContainer from './Grid/GridContainer';
-import Card from './Grid/GridContainer';
-import { Button } from '@material-ui/core';
+
 
 
 class ListarMascotasItem extends React.Component {

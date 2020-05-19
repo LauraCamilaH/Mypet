@@ -1,22 +1,20 @@
 
 
-import { Link, TextField, Typography, Avatar } from '@material-ui/core';
+import { Link, TextField, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import Button from "components/CustomButtons/Button.js";
+import GridContainer from "components/Grid/GridContainer";
 // core components
 import GridItem from "components/Grid/GridItem.js";
-import GridContainer from "components/Grid/GridContainer";
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { Link as RouterLink, withRouter } from 'react-router-dom';
-import validate from 'validate.js';
-import Narvar from 'components/Navbars/Navbar';
-import bgImage from "assets/img/fondoinicio.jpg";
-
 import "Styles/Home.css";
+import validate from 'validate.js';
+
 // import { Link } from 'react-router-dom';
 
 
