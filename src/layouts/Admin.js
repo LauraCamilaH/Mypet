@@ -34,7 +34,7 @@ const switchRoutes = (
       }
       return null;
     })}
-    <Redirect from="/admin" to="/admin/inicio" />
+    <Redirect from="/admin" to="/admin" />
   </Switch>
 );
 
@@ -46,8 +46,8 @@ export default function Admin({ ...rest }) {
   // ref to help us initialize PerfectScrollbar on windows devices
   const mainPanel = React.createRef();
   // states and functions
-  const [image] = React.useState(bgImage);
-  const [color] = React.useState("blue");
+  const [image, setImage] = React.useState(bgImage);
+  const [color, setColor] = React.useState("blue");
   // const [fixedClasses, setFixedClasses] = React.useState("dropdown show");
   const [mobileOpen, setMobileOpen] = React.useState(false);
  
@@ -55,7 +55,7 @@ export default function Admin({ ...rest }) {
     setMobileOpen(!mobileOpen);
   };
   const getRoute = () => {
-    return window.location.pathname !== "/admin/inicio";
+    return window.location.pathname !== "/admin";
   };
   const resizeFunction = () => {
     if (window.innerWidth >= 960) {

@@ -169,7 +169,7 @@ export default function UserProfile() {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary" autoFocus   
-          onClick={() => window.location.href= '/admin'}
+          onClick={() => window.location.href= '/admin/inicio'}
 >
             Aceptar
             {/* <Link

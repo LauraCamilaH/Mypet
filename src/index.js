@@ -21,9 +21,12 @@ ReactDOM.render(
   <ThemeProvider theme={theme}>
     <Router history={hist}>
       <Switch>
+
+        <Route path="/admin" component={Admin} /> 
         <Route path="/signIn" component={Home} />
-        <Route path="/admin" component={Admin} />
+        
         <Route path="/UserProfile" component={UserProfile} />
+
         <Redirect from="/" to="/signIn" />
 
       </Switch>
