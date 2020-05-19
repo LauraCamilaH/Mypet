@@ -245,7 +245,7 @@ const SignIn = (props, navigation) => {
                 size="lg"
                 type="submit"
                 variant="contained"
-                onClick={() => window.location.href= '/admin/inicio'}
+                onClick={() => window.location.href= '/admin'}
                 //onClick={handleClick}
                 // onClick = {handleClick}
               >

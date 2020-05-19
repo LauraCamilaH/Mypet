@@ -1,7 +1,4 @@
-/*!
 
-*/
-// @material-ui/icons
 import Dashboard from "@material-ui/icons/Dashboard";
 import Eventos from "views/Eventos/Eventos.js";
 import RegistroEvento from "views/Historial/RegistroEvento";
