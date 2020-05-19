@@ -55,7 +55,7 @@ export default function Admin({ ...rest }) {
     setMobileOpen(!mobileOpen);
   };
   const getRoute = () => {
-    return window.location.pathname !== "/admin/SignIn";
+    return window.location.pathname !== "/admin/inicio";
   };
   const resizeFunction = () => {
     if (window.innerWidth >= 960) {
